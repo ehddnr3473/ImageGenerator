@@ -20,6 +20,8 @@
 		6BF38B8729A8596C004E6706 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6BF38B8929A8596C004E6706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BF38B8C29A8596C004E6706 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6BF38B9629A85B34004E6706 /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
+		6BF38B9829A85BAD004E6706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +55,12 @@
 		6BF38B8429A8596C004E6706 /* ImageGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				6BF38B9829A85BAD004E6706 /* Info.plist */,
 				6BF38B8529A8596C004E6706 /* ImageGeneratorApp.swift */,
 				6BF38B8729A8596C004E6706 /* ContentView.swift */,
 				6BF38B8929A8596C004E6706 /* Assets.xcassets */,
 				6BF38B8B29A8596C004E6706 /* Preview Content */,
+				6BF38B9629A85B34004E6706 /* APIKey.xcconfig */,
 			);
 			path = ImageGenerator;
 			sourceTree = "<group>";
@@ -155,6 +159,7 @@
 /* Begin XCBuildConfiguration section */
 		6BF38B8E29A8596C004E6706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BF38B9629A85B34004E6706 /* APIKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -272,12 +277,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ImageGenerator/ImageGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGenerator/Preview Content\"";
 				DEVELOPMENT_TEAM = 65KV6R2AGS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,12 +308,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ImageGenerator/ImageGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGenerator/Preview Content\"";
 				DEVELOPMENT_TEAM = 65KV6R2AGS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
