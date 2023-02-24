@@ -3,7 +3,7 @@
 xcuserdata/
 *.xcuserstate
 *.DS_Store
-*.xcconfig
+APIKey.rtf
 
 ## Xcode 8 and earlier
 *.xcscmblueprint
