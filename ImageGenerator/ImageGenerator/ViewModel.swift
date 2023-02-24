@@ -11,10 +11,11 @@ import UIKit
 
 final class ViewModel: ObservableObject {
     @frozen enum Constants {
-        static let key = Bundle.main.infoDictionary?["API_KEY"] as! String
+        static let key = ProcessInfo.processInfo.environment["API_KEY"]!
     }
     
     private var openAI: OpenAI?
+    @Published var image: UIImage?
     
     func setUp() {
         openAI = OpenAI(Configuration(
@@ -23,8 +24,8 @@ final class ViewModel: ObservableObject {
         ))
     }
     
-    func generateImage(prompt: String) async -> UIImage? {
-        guard let openAI = openAI else { return nil }
+    func generateImage(prompt: String) async {
+        guard let openAI = openAI else { return }
         
         do {
             let params = ImageParameters(
@@ -35,10 +36,9 @@ final class ViewModel: ObservableObject {
             let result = try await openAI.createImage(parameters: params)
             let imageData = result.data[0].image
             let image = try openAI.decodeBase64Image(imageData)
-            return image
+            self.image = image
         } catch {
             print(String(describing: error))
-            return nil
         }
     }
 }
